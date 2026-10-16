@@ -4,7 +4,7 @@
   "files": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
     ".github/ISSUE_TEMPLATE/feedback.yml": "71eb94d6c2a44b53041b637b136d4bcaaa5a8c540b4b34e32182bf69ce65bc1e",
-    ".gitignore": "dc846a7bb66a4282a8cb6c28d06e34cc5179ef8adafc445cdfa810f56ab25b52",
+    ".gitignore": "25e7c22c519a725aeba2d187af9266b14216001347bf9e328a66cea30e1d1810",
     "agents/openai.yaml": "b101a02ded4fbfb0f012a3981550b92d937656ac600a9518f95b1ad0376b9d2b",
     "assets/report_renderer/design_tokens.json": "0c7b0a73b69c9b89c2a0a13ad8b5a84b9cc8dcda05bcf82ba1415f31d49e3d6d",
     "assets/report_renderer/export_pdf.py": "ace0d1d93cc0e3b491234680358f751823f8b693f73e1f5e21396ecab21001ea",

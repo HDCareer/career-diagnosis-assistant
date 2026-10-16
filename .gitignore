@@ -10,6 +10,6 @@ cases/
 skill2_cases/
 Skill1-Cases/
 Skill2-Cases/
-input/
+/input/
 outputs/
 *.log
