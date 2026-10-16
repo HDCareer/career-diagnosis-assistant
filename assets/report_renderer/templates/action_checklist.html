@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{DOCUMENT_TITLE}}</title>
+  <style>
+{{CSS}}
+  </style>
+</head>
+<body class="template-premium stage-final checklist-page">
+  <header class="checklist-cover">
+    <p class="stage-label">咨询后最终版</p>
+    <p class="student-name">{{STUDENT_NAME}}</p>
+    <h1>《咨询后行动清单》</h1>
+    <dl>
+      <div><dt>咨询日期</dt><dd>{{CONSULTATION_DATE}}</dd></div>
+      <div><dt>最终主攻方向</dt><dd>{{MAIN_DIRECTION}}</dd></div>
+    </dl>
+    <p class="checklist-cover-note">本清单将最终报告中的方向与准备动作整理为未来 30 天可执行安排。</p>
+  </header>
+  <main class="checklist-main">
+{{CHECKLIST_CONTENT}}
+  </main>
+  <footer class="report-footer checklist-footer">
+    <span>咨询后行动清单</span>
+    <span>本清单用于落实最终报告中的方向与准备动作，不构成录用或结果承诺</span>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>个人求职竞争力与方向决策报告 - 求职诊断报告</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1b6b4f",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#a7f3d0",
+                        "on-primary-container": "#247156",
+                        "secondary": "#396477",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#bae6fd",
+                        "on-secondary-container": "#3d687c",
+                        "tertiary": "#695f02",
+                        "tertiary-container": "#f3e580",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9ff",
+                        "on-background": "#0d1c2e",
+                        "surface": "#f8f9ff",
+                        "on-surface": "#0d1c2e",
+                        "surface-variant": "#d5e3fc",
+                        "on-surface-variant": "#3f4943",
+                        "outline": "#6f7973",
+                        "outline-variant": "#bec9c2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "surface-container": "#e6eeff",
+                        "surface-container-high": "#dce9ff",
+                        "surface-container-highest": "#d5e3fc",
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2.25rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "stack-sm": "12px",
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 8px 32px -4px rgba(0, 81, 58, 0.04);
+        }
+        .floating-shadow {
+            box-shadow: 0 24px 60px -12px rgba(27, 107, 79, 0.1);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #bec9c2;
+            border-radius: 10px;
+        }
+        html { scroll-behavior: smooth; }
+        .section-anchor { scroll-margin-top: 6rem; }
+        .gauge-gradient {
+            background: conic-gradient(from 180deg at 50% 50%, #1b6b4f 0deg, #a7f3d0 180deg, #eff4ff 180deg);
+        }
+        .text-\[10px\] {
+            font-size: 0.75rem !important;
+            line-height: 1.15rem !important;
+        }
+        .text-\[11px\] {
+            font-size: 0.8125rem !important;
+            line-height: 1.25rem !important;
+        }
+        .text-xs {
+            font-size: 0.875rem !important;
+            line-height: 1.45rem !important;
+        }
+        .tracking-widest {
+            letter-spacing: 0.04em !important;
+        }
+        .tracking-\[0\.2em\] {
+            letter-spacing: 0.08em !important;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<span class="text-xl font-bold text-primary">求职诊断报告</span>
+</div>
+<div class="hidden lg:flex gap-8 items-center font-medium text-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#section-1">结论</a>
+<a class="hover:text-primary transition-colors" href="#section-3">竞争力</a>
+<a class="hover:text-primary transition-colors" href="#section-6">决策</a>
+<a class="hover:text-primary transition-colors" href="#section-8">规划</a>
+</div>
+</div>
+</nav>
+<div class="flex pt-20 max-w-container-max mx-auto min-h-screen">
+<!-- Sidebar -->
+<aside class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 hidden xl:flex flex-col border-r border-outline-variant/20 py-8 px-6 overflow-y-auto custom-scrollbar">
+<div class="mb-8 p-4 bg-white/50 rounded-2xl border border-white flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center text-primary border border-primary/10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">fact_check</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest">最终版报告</p>
+<p class="text-xs font-semibold text-on-surface-variant">2026-06-29</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 p-3 rounded-xl hover:bg-white text-on-surface-variant hover:text-primary transition-all group" href="#section-1">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">analytics</span>
+<span class="text-sm font-medium">结论总览</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl hover:bg-white text-on-surface-variant hover:text-primary transition-all group" href="#section-2">
+<span class="material-symbols-outlined text-[20px]">person_search</span>
+<span class="text-sm font-medium">求职画像</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl hover:bg-white text-on-surface-variant hover:text-primary transition-all group" href="#section-3">
+<span class="material-symbols-outlined text-[20px]">radar</span>
+<span class="text-sm font-medium">竞争力对标</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl hover:bg-white text-on-surface-variant hover:text-primary transition-all group" href="#section-4">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span class="text-sm font-medium">核心优势</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl hover:bg-white text-on-surface-variant hover:text-primary transition-all group" href="#section-5">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<span class="text-sm font-medium">关键差距</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl hover:bg-white text-on-surface-variant hover:text-primary transition-all group" href="#section-6">
+<span class="material-symbols-outlined text-[20px]">call_split</span>
+<span class="text-sm font-medium">方向决策</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl hover:bg-white text-on-surface-variant hover:text-primary transition-all group" href="#section-7">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+<span class="text-sm font-medium">准备方案</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl hover:bg-white text-on-surface-variant hover:text-primary transition-all group" href="#section-8">
+<span class="material-symbols-outlined text-[20px]">route</span>
+<span class="text-sm font-medium">行动路线</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-xl hover:bg-white text-on-surface-variant hover:text-primary transition-all group" href="#section-9">
+<span class="material-symbols-outlined text-[20px]">info</span>
+<span class="text-sm font-medium">信息依据</span>
+</a>
+</nav>
+<div class="mt-auto p-4 bg-primary/5 rounded-2xl border border-primary/10">
+<p class="text-[11px] text-primary/70 mb-2 font-bold tracking-tight">PROGRESS TRACKER</p>
+<div class="h-1.5 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 100%"></div>
+</div>
+<p class="text-[10px] mt-2 text-on-surface-variant">咨询后最终版本已生成</p>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 xl:ml-72 p-8 md:p-12 space-y-20 pb-32"></main>
+</div>
+</body></html>

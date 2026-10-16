@@ -1,0 +1,28 @@
+name: 使用反馈
+description: 告诉我们哪里有用、哪里不好用
+title: "[反馈] "
+body:
+  - type: markdown
+    attributes:
+      value: "感谢试用。请只提供虚构或脱敏片段，不要上传简历、联系方式、合同或密钥。"
+  - type: input
+    id: environment
+    attributes:
+      label: 使用环境
+      description: 平台、模型、公开包版本
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 你在做什么
+      description: 哪个环节，期待得到什么帮助？
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 实际体验
+      description: 哪里有用，哪里不够好？可以附脱敏短片段。
+    validations:
+      required: true

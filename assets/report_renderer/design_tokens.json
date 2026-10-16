@@ -1,0 +1,52 @@
+{
+  "version": "3.0",
+  "default_template": "premium_consulting",
+  "brand": {
+    "company_name": "求职诊断报告"
+  },
+  "font_stack": {
+    "cn": "\"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans CJK SC\", Arial, sans-serif"
+  },
+  "colors": {
+    "background": "#eef3f1",
+    "surface": "#ffffff",
+    "surface_soft": "#f7f9f8",
+    "ink": "#172b35",
+    "muted": "#60717a",
+    "line": "#d9e2df",
+    "navy": "#173449",
+    "teal": "#167a70",
+    "teal_soft": "#e5f3f0",
+    "blue_soft": "#eaf2f7",
+    "pre_consultation": "#6f879b",
+    "pre_consultation_soft": "#eaf1f6",
+    "final_confirmation": "#173449",
+    "pending": "#aa7429",
+    "pending_soft": "#fff5e5",
+    "risk": "#a66762",
+    "risk_soft": "#f8ecea",
+    "benchmark_candidate": "#1d7a77",
+    "benchmark_target": "#285e85"
+  },
+  "spacing": {
+    "page_width": "1160px",
+    "page_gutter": "44px",
+    "section_gap": "30px",
+    "card_padding": "20px",
+    "section_padding": "30px",
+    "checklist_gap": "18px",
+    "pdf_section_gap": "16px"
+  },
+  "radius": {
+    "card": "8px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "card": "0 12px 32px rgba(18, 48, 57, 0.08)",
+    "panel": "0 20px 48px rgba(18, 48, 57, 0.12)"
+  },
+  "print": {
+    "page_size": "A4",
+    "margin": "12mm"
+  }
+}

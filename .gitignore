@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env*
+!.env.example
+.DS_Store
+Thumbs.db
+case_state.json
+case_state.events.jsonl
+cases/
+skill2_cases/
+Skill1-Cases/
+Skill2-Cases/
+input/
+outputs/
+*.log

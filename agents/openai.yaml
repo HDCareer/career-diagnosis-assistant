@@ -1,0 +1,4 @@
+interface:
+  display_name: "求职诊断与报告助手"
+  short_description: "帮助顾问完成会前求职诊断、咨询纪要确认、最终报告与行动清单交付"
+  default_prompt: "使用 $career-diagnosis-assistant，先检查现有材料，开始生成会前诊断初版。"

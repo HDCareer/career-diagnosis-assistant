@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{DOCUMENT_TITLE}}</title>
+  <style>
+{{CSS}}
+  </style>
+</head>
+<body class="template-premium {{REPORT_STAGE_CLASS}}">
+  <header class="cover">
+    <div class="cover-shell">
+      <section class="cover-copy">
+        <p class="stage-label">{{REPORT_STAGE_LABEL}}</p>
+        <p class="student-name">{{STUDENT_NAME}}</p>
+        <h1>{{REPORT_TITLE}}</h1>
+        <p class="cover-subtitle">{{TARGET_PATH}}</p>
+        <div class="cover-conclusion">
+          <span>一句话核心判断</span>
+          <p>{{CORE_CONCLUSION}}</p>
+        </div>
+      </section>
+      <aside class="cover-side">
+        <span class="panel-label">报告阶段</span>
+        <strong>{{REPORT_STAGE_LABEL}}</strong>
+        <p class="stage-note">{{STAGE_NOTE}}</p>
+        <div class="cover-main-direction">
+          <span class="panel-label">主攻方向</span>
+          <b>{{MAIN_DIRECTION}}</b>
+        </div>
+        <div class="cover-tags">
+          <span class="panel-label">核心优势标签</span>
+          <div class="tag-row">{{COVER_TAGS}}</div>
+        </div>
+        <time>{{REPORT_DATE}}</time>
+      </aside>
+    </div>
+  </header>
+  <main class="report-main">
+{{REPORT_CONTENT}}
+  </main>
+  <footer class="report-footer">
+    <span>个人求职竞争力与方向决策报告</span>
+    <span>方向、薪资与时间窗口仅作参考，不构成结果承诺</span>
+  </footer>
+</body>
+</html>

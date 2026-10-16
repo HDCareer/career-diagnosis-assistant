@@ -1,0 +1,129 @@
+{
+  "report_meta": {
+    "report_version": "v3.0",
+    "report_stage": "pre_consultation",
+    "customer_display_label": "会前诊断初版｜供1v1咨询讨论使用",
+    "report_date": "2026-06-23",
+    "safe_case_id": "V3-PRE-DEMO-01",
+    "privacy_mode": "anonymous",
+    "report_title": "个人求职竞争力与方向决策报告"
+  },
+  "candidate_context": {
+    "education_background_type": "overseas_education",
+    "job_search_path_type": "overseas_returning_to_china",
+    "background_summary": "已完成商科硕士学习，具备课程项目与数据分析工具的基础使用经验。",
+    "education_summary": "当前目标是回国寻找与商业分析相邻的初级岗位。",
+    "experience_summary": "已有项目型经历，但需要在咨询中进一步确认成果边界与可用故事。"
+  },
+  "source_register": {
+    "resume_facts": ["完整简历"],
+    "pre_consultation_answers": ["固定问题回答", "地区动态问题回答"],
+    "operating_notes": {
+      "resume_versions_provided": [],
+      "explicit_deadlines": [],
+      "confirmed_material_gaps": [],
+      "customer_stated_focus": ["回国求职"],
+      "other_decision_relevant_notes": []
+    },
+    "consultation_confirmations": [],
+    "consultation_confirmation_status": "not_started",
+    "unresolved_questions": [
+      {
+        "question": "城市优先级如何排序",
+        "source_reference": "固定问题回答#城市偏好",
+        "why_decision_relevant": "城市排序会影响投递城市和招聘路径优先级。",
+        "unresolved_reason_type": "explicit_missing"
+      },
+      {
+        "question": "是否接受轮岗或高频出差",
+        "source_reference": "地区动态问题回答#工作方式边界",
+        "why_decision_relevant": "工作方式边界会影响岗位筛选和路径成立条件。",
+        "unresolved_reason_type": "explicit_missing"
+      }
+    ],
+    "unresolved_information": ["城市优先级如何排序", "是否接受轮岗或高频出差"]
+  },
+  "decision_snapshot": {
+    "current_judgement": "基于当前材料，商业分析与经营分析岗具备可讨论的起点；城市与岗位边界仍需在咨询中确认。",
+    "core_request": "在回国路径中确定一个可集中准备的分析类主方向，并明确近期准备重点。",
+    "main_direction": { "direction_name": "商业分析与经营分析岗" },
+    "adjacent_backup": { "direction_name": "策略运营分析岗", "activation_condition": "当项目经历能够补充跨部门推进案例时启用。" },
+    "key_strengths": ["具备结构化分析基础", "有跨文化协作场景", "能使用常见数据整理工具"],
+    "key_gaps": ["成果量化证据待确认", "主攻岗位叙事尚未收束", "城市与工作方式边界不完整"],
+    "next_actions": ["梳理两段项目的结果证据", "确认城市与轮岗边界", "准备三段分析型面试故事" ]
+  },
+  "decision_boundaries": {
+    "target_region": "中国内地回国求职路径",
+    "city_preferences": ["优先一线及新一线城市", "城市排序待咨询确认"],
+    "time_preferences": ["以毕业后可入职时间为基准安排"],
+    "role_preferences": ["商业分析", "经营分析", "策略运营分析"],
+    "platform_preferences": ["有规范培养机制的平台", "业务分析场景清晰的团队"],
+    "work_style_boundaries": ["不以强销售导向岗位作为优先", "是否接受轮岗待确认"],
+    "stated_exclusions": ["纯销售拓展岗"],
+    "unresolved_questions": ["城市优先级如何排序", "是否接受轮岗或高频出差"]
+  },
+  "three_dimension_benchmark": [
+    { "dimension_name": "基础资本与准入条件", "candidate_level": 3, "target_entry_level": 3, "current_judgement": "学历与分析基础能够支持进入初级筛选。", "basis": "已完成相关课程并有工具练习记录。", "main_gap": "项目成果的量化表达需要补足。", "priority_action": "补齐两段项目的职责、方法和结果证据。", "confidence_note": "基于简历初步判断，咨询中需核对项目细节。" },
+    { "dimension_name": "岗位匹配与经历支撑", "candidate_level": 2, "target_entry_level": 3, "current_judgement": "已有相邻经历，但与主攻岗位的对应关系仍需收束。", "basis": "项目中出现过问题拆解和资料整理任务。", "main_gap": "缺少一条完整的分析到建议的故事线。", "priority_action": "将项目经历改写为问题、分析、建议和结果的结构。", "confidence_note": "部分成果仍待咨询确认。" },
+    { "dimension_name": "求职准备与执行成熟度", "candidate_level": 2, "target_entry_level": 3, "current_judgement": "准备动作已经开始，但尚未形成稳定投递材料。", "basis": "已有方向偏好，尚无完整岗位关键词表。", "main_gap": "简历版本与面试故事尚未形成闭环。", "priority_action": "先完成一版主方向简历与三段故事提纲。", "confidence_note": "城市和工作方式边界会影响后续路径安排。" }
+  ],
+  "strengths_and_basis": [
+    { "core_strength": "结构化拆解问题的习惯", "experience_basis": "课程项目中完成过问题分解、资料整理与结论汇总。", "job_search_value": "有利于承接初级分析岗位的基础任务。", "applicable_scenarios": ["业务数据复盘", "经营分析支持"] },
+    { "core_strength": "跨文化协作经验", "experience_basis": "曾在多文化小组中协调分工并共同交付项目。", "job_search_value": "能支持需要多方沟通的业务支持场景。", "applicable_scenarios": ["跨团队项目推进", "区域业务协作"] },
+    { "core_strength": "数据工具上手基础", "experience_basis": "已在课程和项目中使用表格与基础可视化工具。", "job_search_value": "可作为短期补强后进入分析类岗位的工具底座。", "applicable_scenarios": ["经营数据整理", "周度业务复盘"] }
+  ],
+  "improvement_priorities": [
+    { "key_gap": "项目成果缺少可验证结果", "target_impact": "会降低简历初筛和面试说服力。", "issue_type": "材料表达问题", "improvement_method": "逐项补充项目目标、个人动作与可核对的结果。", "post_improvement_value": "形成可用于简历和面试的完整项目叙事。", "priority": "高" },
+    { "key_gap": "主攻岗位关键词尚未收束", "target_impact": "会导致简历重点和故事准备分散。", "issue_type": "信息确认/决策边界问题", "improvement_method": "在咨询中确认岗位职责偏好和城市排序。", "post_improvement_value": "能确定一版聚焦的主方向材料。", "priority": "高" },
+    { "key_gap": "面试故事未形成固定提纲", "target_impact": "会影响后续面试准备效率。", "issue_type": "短期可训练问题", "improvement_method": "围绕分析、协作和推进各准备一段故事。", "post_improvement_value": "能支撑常见行为面与项目追问。", "priority": "中" }
+  ],
+  "direction_decision": {
+    "main_direction": { "direction_name": "商业分析与经营分析岗", "recommendation_reason": "当前经历与工具基础更容易集中到分析、复盘和业务支持场景。" },
+    "adjacent_backup": { "direction_name": "策略运营分析岗", "recommendation_reason": "可承接项目推进与跨团队协作经历。", "activation_condition": "补齐一段业务推进案例后启用。" },
+    "safe_progression": { "direction_name": "业务运营支持岗", "recommendation_reason": "可作为分析能力逐步积累的稳妥路径。" },
+    "conditional_exploration": [ { "direction_name": "产品运营分析岗", "recommendation_reason": "需要进一步确认内容或产品场景偏好。", "low_cost_validation": "阅读岗位职责并完成一次经历映射。" } ],
+    "diagnostic_not_recommended": []
+  },
+  "main_direction_preparation": {
+    "direction_name": "商业分析与经营分析岗",
+    "common_role_titles": ["商业分析专员", "经营分析专员", "业务分析助理"],
+    "core_responsibilities": ["整理业务数据", "支持周期性复盘", "输出可执行的分析建议"],
+    "valued_capabilities": ["问题拆解", "基础数据处理", "沟通表达"],
+    "available_experiences": ["课程项目分析", "小组协作交付", "工具练习"],
+    "needs_supplement": ["项目结果证据", "业务指标理解"],
+    "resume_focus": ["突出问题到结论的过程", "使用清晰的工具与产出表述"],
+    "interview_stories": [
+      { "story_title": "一次分析问题的拆解", "usage_scenario": "回答如何处理复杂问题" },
+      { "story_title": "一次跨文化小组协作", "usage_scenario": "回答如何推动协作" },
+      { "story_title": "一次资料整理到建议输出", "usage_scenario": "回答如何形成结论" }
+    ],
+    "adjustment_signals": ["核心岗位要求明显偏向统计建模时重新评估", "城市边界变化时同步调整路径优先级"]
+  },
+  "recruitment_path_salary_and_roadmap": {
+    "current_recruitment_stage": "材料收束与主方向确认阶段",
+    "current_window_judgement": "当前应先完成材料和故事准备，再持续关注方向级渠道。",
+    "priority_recruitment_paths": ["校园就业中心", "企业官网的校招或初级岗位入口"],
+    "parallel_paths": ["行业协会公开信息", "目标平台的长期人才项目"],
+    "special_channels": ["学校职业发展中心的方向咨询"],
+    "next_key_milestone": "咨询后确认主攻方向并完成主方向简历。",
+    "salary_reference": [
+      { "direction": "商业分析与经营分析岗", "region": "一线及新一线城市", "currency": "人民币", "salary_basis": "税前月薪参考", "realistic_range": "8,000–12,000 / 月", "upper_range": "12,000–15,000 / 月", "influencing_factors": ["行业", "项目匹配度", "城市"], "reference_degree": "基于方向的初步参考", "caution": "需结合具体岗位公告、城市和个人经历确认。" }
+    ],
+    "roadmap_30_60_90": [
+      { "stage": "30 天", "stage_objective": "确认方向与完成材料底稿。", "core_actions": ["核对项目结果", "完成主方向简历"], "outputs": ["一版可投递简历", "三段故事提纲"], "completion_signs": ["简历与主攻方向一致", "故事可完成口头讲述"] },
+      { "stage": "60 天", "stage_objective": "形成岗位关键词与面试练习闭环。", "core_actions": ["整理岗位关键词", "练习项目追问"], "outputs": ["关键词表", "面试复盘记录"], "completion_signs": ["能用主方向语言解释三段经历"] },
+      { "stage": "90 天", "stage_objective": "根据反馈调整材料与路径。", "core_actions": ["复盘反馈", "更新材料重点"], "outputs": ["更新后的简历版本", "方向复盘记录"], "completion_signs": ["能说明保留或调整方向的依据"] }
+    ]
+  },
+  "information_basis_and_boundaries": {
+    "source_categories": ["已提供的简历", "会前补充信息"],
+    "consultation_confirmation_sources": [],
+    "remaining_unknowns": ["城市优先级如何排序", "是否接受轮岗或高频出差"],
+    "boundaries": ["岗位与薪资仅作方向参考", "不生成具体实时岗位链接"],
+    "scope_statement": "用于会前讨论当前方向假设、信息缺口和准备重点。"
+  },
+  "consultation_change_summary": {
+    "applied": false,
+    "remaining_unknowns": ["城市优先级如何排序", "是否接受轮岗或高频出差"]
+  }
+}

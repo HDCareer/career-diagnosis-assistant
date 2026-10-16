@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>求职诊断报告</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Lora:ital,wght@0,400;0,600;0,700;1,400&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#81BBB8", // Muted Tiffany Green
+                        "secondary": "#9CAF88", // Soft Morandi Sage
+                        "accent": "#B2D8D6", // Light Tiffany
+                        "background": "#F9FBF9", // Mint-tinted cream
+                        "surface": "#FFFFFF",
+                        "on-surface": "#2F4F4F",
+                        "on-surface-variant": "#5F7F7F",
+                        "outline": "#B2D8D6",
+                        "error": "#E57373"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "2rem",
+                        "lg": "3rem",
+                        "xl": "4rem",
+                        "full": "9999px",
+                        "organic": "40% 60% 70% 30% / 40% 50% 60% 50%"
+                    },
+                    fontFamily: {
+                        "headline": ["Lora", "serif"],
+                        "body": ["Montserrat", "sans-serif"],
+                        "mono": ["Space Mono", "monospace"]
+                    },
+                    spacing: {
+                        "margin-desktop": "60px",
+                        "container-max": "1280px"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #F9FBF9;
+            color: #2F4F4F;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            cursor: default;
+        }
+        .pre-master-brand-logo {
+            display: block;
+            height: 34px;
+            width: auto;
+            max-width: 210px;
+            object-fit: contain;
+        }
+        .report-title-main {
+            font-size: clamp(2.65rem, 5.2vw, 5.6rem);
+            line-height: 1.08;
+            letter-spacing: 0;
+            white-space: normal;
+            overflow-wrap: break-word;
+        }
+        .report-title-version {
+            margin-top: 18px;
+            font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+            line-height: 1.4;
+            font-weight: 600;
+            color: #81BBB8;
+            letter-spacing: 0;
+        }
+        .oval-panel {
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+            padding: 48px;
+        }
+        .oval-content-safe-area {
+            width: 100%;
+            max-width: 320px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            line-height: 1.72;
+        }
+        .font-lora { font-family: 'Lora', serif; }
+        
+        /* Organic Glassmorphism */
+        .organic-glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(129, 187, 184, 0.2);
+            border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+            box-shadow: 0 20px 40px -15px rgba(129, 187, 184, 0.15);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .organic-glass:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(129, 187, 184, 0.25);
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Organic Background Blobs */
+        .blob {
+            position: absolute;
+            z-index: -1;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1) rotate(0deg); border-radius: 40% 60% 70% 30%; }
+            33% { transform: translate(30px, -50px) scale(1.1) rotate(5deg); border-radius: 60% 40% 30% 70%; }
+            66% { transform: translate(-20px, 20px) scale(0.9) rotate(-5deg); border-radius: 30% 70% 70% 30%; }
+            100% { transform: translate(0, 0) scale(1) rotate(0deg); border-radius: 40% 60% 70% 30%; }
+        }
+
+        /* Custom Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyword Highlighting */
+        .highlight {
+            font-weight: 700;
+            color: #81BBB8;
+            position: relative;
+            z-index: 1;
+        }
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: -2px;
+            right: -2px;
+            height: 8px;
+            background: rgba(129, 187, 184, 0.15);
+            z-index: -1;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(129, 187, 184, 0.3);
+        }
+
+        /* Mouse Tracking Light */
+        #cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(129, 187, 184, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+        }
+
+        /* Wave Divider */
+        .wave-divider {
+            width: 100%;
+            height: 80px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23F9FBF9' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,144C672,139,768,181,864,181.3C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+<div id="cursor-glow" style="transform: translate(553px, 7747px);"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background/60 backdrop-blur-xl border-b border-primary/10"></nav>
+<main class="relative"></main>
+<!-- Footer -->
+<footer></footer>
+<script>
+        // Custom Cursor Glow Tracking
+        const glow = document.getElementById('cursor-glow');
+        window.addEventListener('mousemove', (e) => {
+            glow.style.transform = `translate(${e.clientX - 300}px, ${e.clientY - 300}px)`;
+        });
+
+        // Reveal on Scroll Animation
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(reveal => revealObserver.observe(reveal));
+    </script>
+</body></html>

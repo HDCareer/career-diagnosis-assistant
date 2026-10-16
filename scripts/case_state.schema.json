@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SkillⅠ persistent case state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "created_at", "updated_at", "workflow_stage", "consultation_confirmation_status", "intake", "artifacts", "last_error", "transition_history"],
+  "properties": {
+    "schema_version": {"const": "1.2"},
+    "case_id": {"type": "string", "pattern": "^CASE-[0-9]{8}-[0-9]{6}-[A-Z0-9]{4}$"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "workflow_stage": {"enum": ["new_case", "intake_incomplete", "pre_analysis_ready", "awaiting_consultation", "consultation_notes_draft", "final_generation_ready", "completed"]},
+    "consultation_confirmation_status": {"enum": ["not_started", "draft", "confirmed"]},
+    "intake": {"$ref": "#/$defs/intake"},
+    "artifacts": {"$ref": "#/$defs/artifacts"},
+    "last_error": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/error"}]},
+    "transition_history": {"type": "array", "items": {"$ref": "#/$defs/transition"}}
+  },
+  "$defs": {
+    "intake": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["resume_status", "fixed_questions_status", "region_question_status", "operating_notes_status", "missing_items", "unresolved_items_count", "blocking_conflicts"],
+      "properties": {
+        "resume_status": {"enum": ["missing", "received", "valid", "limited_accepted", "invalid"]},
+        "fixed_questions_status": {"enum": ["missing", "partial", "complete"]},
+        "region_question_status": {"enum": ["missing", "complete"]},
+        "operating_notes_status": {"enum": ["missing", "complete"]},
+        "missing_items": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9_-]{1,64}$"}},
+        "unresolved_items_count": {"type": "integer", "minimum": 0},
+        "blocking_conflicts": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9_-]{1,64}$"}}
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "path", "updated_at"],
+      "properties": {
+        "status": {"enum": ["missing", "received", "ready", "failed", "not_requested"]},
+        "path": {"type": ["string", "null"]},
+        "updated_at": {"type": ["string", "null"], "format": "date-time"}
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["resume", "normalized_intake", "pre_report_data", "pre_report_markdown", "pre_report_html", "pre_report_pdf", "consultation_transcript", "consultation_structured_notes", "consultant_summary", "consultation_confirmation_form", "consultation_confirmation_internal", "confirmed_consultation_snapshot", "final_report_data", "final_report_markdown", "consultation_change_log", "action_checklist_markdown", "final_report_html", "final_report_pdf", "action_checklist_html", "action_checklist_pdf"],
+      "properties": {
+        "resume": {"$ref": "#/$defs/artifact"},
+        "normalized_intake": {"$ref": "#/$defs/artifact"},
+        "pre_report_data": {"$ref": "#/$defs/artifact"},
+        "pre_report_markdown": {"$ref": "#/$defs/artifact"},
+        "pre_report_html": {"$ref": "#/$defs/artifact"},
+        "pre_report_pdf": {"$ref": "#/$defs/artifact"},
+        "consultation_transcript": {"$ref": "#/$defs/artifact"},
+        "consultation_structured_notes": {"$ref": "#/$defs/artifact"},
+        "consultant_summary": {"$ref": "#/$defs/artifact"},
+        "consultation_confirmation_form": {"$ref": "#/$defs/artifact"},
+        "consultation_confirmation_internal": {"$ref": "#/$defs/artifact"},
+        "confirmed_consultation_snapshot": {"$ref": "#/$defs/artifact"},
+        "final_report_data": {"$ref": "#/$defs/artifact"},
+        "final_report_markdown": {"$ref": "#/$defs/artifact"},
+        "consultation_change_log": {"$ref": "#/$defs/artifact"},
+        "action_checklist_markdown": {"$ref": "#/$defs/artifact"},
+        "final_report_html": {"$ref": "#/$defs/artifact"},
+        "final_report_pdf": {"$ref": "#/$defs/artifact"},
+        "action_checklist_html": {"$ref": "#/$defs/artifact"},
+        "action_checklist_pdf": {"$ref": "#/$defs/artifact"}
+      }
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["component", "stage", "message", "occurred_at", "retryable"],
+      "properties": {
+        "component": {"type": "string", "pattern": "^[a-z0-9_-]{1,64}$"},
+        "stage": {"enum": ["new_case", "intake_incomplete", "pre_analysis_ready", "awaiting_consultation", "consultation_notes_draft", "final_generation_ready", "completed"]},
+        "message": {"type": "string", "minLength": 1, "maxLength": 240},
+        "occurred_at": {"type": "string", "format": "date-time"},
+        "retryable": {"type": "boolean"}
+      }
+    },
+    "transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to", "occurred_at", "reason"],
+      "properties": {
+        "from": {"enum": ["new_case", "intake_incomplete", "pre_analysis_ready", "awaiting_consultation", "consultation_notes_draft", "final_generation_ready"]},
+        "to": {"enum": ["intake_incomplete", "pre_analysis_ready", "awaiting_consultation", "consultation_notes_draft", "final_generation_ready", "completed"]},
+        "occurred_at": {"type": "string", "format": "date-time"},
+        "reason": {"enum": ["missing_required_intake", "intake_complete", "pre_report_ready", "consultation_material_received", "consultation_source_received", "consultation_transcript_received", "consultation_confirmed", "final_delivery_ready"]}
+      }
+    }
+  }
+}

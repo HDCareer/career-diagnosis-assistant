@@ -1,0 +1,356 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SkillⅠ v3.0 report data",
+  "type": "object",
+  "required": [
+    "report_meta",
+    "candidate_context",
+    "source_register",
+    "decision_snapshot",
+    "decision_boundaries",
+    "three_dimension_benchmark",
+    "strengths_and_basis",
+    "improvement_priorities",
+    "direction_decision",
+    "main_direction_preparation",
+    "recruitment_path_salary_and_roadmap",
+    "information_basis_and_boundaries",
+    "consultation_change_summary"
+  ],
+  "$defs": {
+    "textList": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "unresolvedQuestion": {
+      "type": "object",
+      "required": ["question", "source_reference", "why_decision_relevant", "unresolved_reason_type"],
+      "properties": {
+        "question": { "type": "string", "minLength": 1 },
+        "source_reference": { "type": "string", "minLength": 1 },
+        "why_decision_relevant": { "type": "string", "minLength": 1 },
+        "unresolved_reason_type": {
+          "enum": ["explicit_missing", "conflict", "required_qualification", "region_required"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "direction": {
+      "type": "object",
+      "required": ["direction_name"],
+      "properties": {
+        "direction_name": { "type": "string", "minLength": 1 },
+        "recommendation_reason": { "type": "string" },
+        "activation_condition": { "type": "string" },
+        "reassessment_condition": { "type": "string" },
+        "low_cost_validation": { "type": "string" },
+        "usable_evidence": { "type": "string" },
+        "main_barrier": { "type": "string" },
+        "long_term_path_value": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "coreQuestionAnswer": {
+      "type": "object",
+      "required": ["question", "answer", "answer_status", "boundary"],
+      "properties": {
+        "question": { "type": "string", "minLength": 1 },
+        "answer": { "type": "string", "minLength": 1 },
+        "answer_status": { "enum": ["answered", "partially_answered", "not_answerable"] },
+        "boundary": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    },
+    "criticalEvidenceStatus": {
+      "type": "object",
+      "required": ["subject", "source_type", "verification_status", "current_safe_wording"],
+      "properties": {
+        "subject": { "type": "string", "minLength": 1 },
+        "source_type": { "enum": ["resume", "pre_consultation_self_report", "consultation_self_report", "consultant_summary", "consultant_judgement", "material_verified", "independent_verified"] },
+        "verification_status": { "enum": ["unverified", "partially_supported", "material_verified", "independent_verified"] },
+        "current_safe_wording": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    },
+    "salaryAssessment": {
+      "type": "object",
+      "required": ["customer_ideal_target", "customer_minimum_boundaries", "consultant_reality_label", "consultant_reasoning", "external_market_reference", "decision_guidance", "evidence_limit"],
+      "properties": {
+        "customer_ideal_target": { "type": "string", "minLength": 1 },
+        "customer_minimum_boundaries": { "$ref": "#/$defs/textList" },
+        "consultant_reality_label": { "enum": ["realistic", "challenging", "stretch", "currently_unrealistic", "insufficient_basis"] },
+        "consultant_reasoning": { "type": "string", "minLength": 1 },
+        "external_market_reference": {
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "status": { "enum": ["not_used", "provided"] },
+            "region": { "type": "string" },
+            "role": { "type": "string" },
+            "basis": { "type": "string" },
+            "time": { "type": "string" },
+            "source_type": { "type": "string" },
+            "confidence": { "type": "string" },
+            "range": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "decision_guidance": { "type": "string", "minLength": 1 },
+        "evidence_limit": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    },
+    "actionScaffold": {
+      "type": "object",
+      "required": ["action_name", "why_now", "dependency", "first_15_minute_step", "content_framework", "minimum_viable_output", "estimated_effort", "completion_check", "common_mistakes"],
+      "properties": {
+        "action_name": { "type": "string", "minLength": 1 },
+        "why_now": { "type": "string", "minLength": 1 },
+        "dependency": { "type": "string", "minLength": 1 },
+        "first_15_minute_step": { "type": "string", "minLength": 1 },
+        "content_framework": { "type": "string", "minLength": 1 },
+        "minimum_viable_output": { "type": "string", "minLength": 1 },
+        "estimated_effort": { "type": "string", "minLength": 1 },
+        "completion_check": { "type": "string", "minLength": 1 },
+        "common_mistakes": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    },
+    "roadmapStage": {
+      "type": "object",
+      "required": ["stage", "stage_objective", "core_actions", "outputs", "completion_signs"],
+      "properties": {
+        "stage": { "type": "string", "pattern": "^((30|60|90).*$|\\d{4}年\\d{1,2}月\\d{1,2}日前.*$|关键截止日前.*$)" },
+        "stage_objective": { "type": "string", "minLength": 1 },
+        "core_actions": { "$ref": "#/$defs/textList" },
+        "outputs": { "$ref": "#/$defs/textList" },
+        "completion_signs": { "$ref": "#/$defs/textList" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "properties": {
+    "report_meta": {
+      "type": "object",
+      "required": ["report_version", "report_stage", "customer_display_label", "report_date"],
+      "properties": {
+        "report_version": { "const": "v3.0" },
+        "report_stage": { "enum": ["pre_consultation", "post_consultation_final"] },
+        "customer_display_label": { "type": "string", "minLength": 1 },
+        "report_date": { "type": "string", "minLength": 1 },
+        "safe_case_id": { "type": "string", "pattern": "^[A-Za-z0-9_-]{4,64}$" },
+        "privacy_mode": { "enum": ["one_to_one", "anonymous", "training", "case_review", "public"] },
+        "customer_name": { "type": "string" },
+        "report_title": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "candidate_context": {
+      "type": "object",
+      "required": ["education_background_type", "job_search_path_type"],
+      "properties": {
+        "education_background_type": { "enum": ["domestic_education", "overseas_education", "mixed_education"] },
+        "job_search_path_type": { "enum": ["china_mainland_domestic", "overseas_returning_to_china", "hong_kong_local", "australia_local", "us_local", "multi_path"] },
+        "background_summary": { "type": "string" },
+        "education_summary": { "type": "string" },
+        "experience_summary": { "type": "string" },
+        "current_assets": { "type": "array", "maxItems": 5, "items": { "type": "string", "minLength": 1 } },
+        "future_potential": { "type": "array", "maxItems": 5, "items": { "type": "string", "minLength": 1 } },
+        "planned_not_current": { "type": "array", "maxItems": 5, "items": { "type": "string", "minLength": 1 } }
+      },
+      "additionalProperties": true
+    },
+    "source_register": {
+      "type": "object",
+      "required": ["consultation_confirmation_status"],
+      "properties": {
+        "consultation_confirmation_status": { "enum": ["not_started", "draft", "confirmed"] },
+        "resume_facts": { "type": ["array", "object"] },
+        "pre_consultation_answers": { "type": ["array", "object"] },
+        "operating_notes": { "type": "object" },
+        "consultation_confirmations": { "type": ["array", "object"] },
+        "unresolved_information": { "type": "array" },
+        "unresolved_questions": { "type": "array", "items": { "$ref": "#/$defs/unresolvedQuestion" } },
+        "critical_evidence_status": { "type": "array", "maxItems": 8, "items": { "$ref": "#/$defs/criticalEvidenceStatus" } }
+      },
+      "additionalProperties": true
+    },
+    "decision_snapshot": {
+      "type": "object",
+      "required": ["current_judgement", "core_request", "main_direction", "key_strengths", "key_gaps", "next_actions"],
+      "properties": {
+        "current_judgement": { "type": "string", "minLength": 1 },
+        "core_request": { "type": "string", "minLength": 1 },
+        "main_direction": { "$ref": "#/$defs/direction" },
+        "adjacent_backup": { "$ref": "#/$defs/direction" },
+        "core_question_answers": { "type": "array", "maxItems": 3, "items": { "$ref": "#/$defs/coreQuestionAnswer" } },
+        "key_strengths": { "$ref": "#/$defs/textList" },
+        "key_gaps": { "$ref": "#/$defs/textList" },
+        "next_actions": { "$ref": "#/$defs/textList" }
+      },
+      "additionalProperties": true
+    },
+    "decision_boundaries": {
+      "type": "object",
+      "required": ["target_region", "city_preferences", "role_preferences", "platform_preferences", "work_style_boundaries", "stated_exclusions", "unresolved_questions"],
+      "properties": {
+        "target_region": { "oneOf": [{ "type": "string", "minLength": 1 }, { "$ref": "#/$defs/textList" }] },
+        "city_preferences": { "$ref": "#/$defs/textList" },
+        "time_preferences": { "$ref": "#/$defs/textList" },
+        "role_preferences": { "$ref": "#/$defs/textList" },
+        "platform_preferences": { "$ref": "#/$defs/textList" },
+        "work_style_boundaries": { "$ref": "#/$defs/textList" },
+        "stated_exclusions": { "$ref": "#/$defs/textList" },
+        "unresolved_questions": { "$ref": "#/$defs/textList" }
+      },
+      "additionalProperties": true
+    },
+    "three_dimension_benchmark": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["dimension_name", "candidate_level", "target_entry_level", "current_judgement", "basis", "main_gap", "priority_action", "confidence_note"],
+        "properties": {
+          "dimension_name": { "enum": ["基础资本与准入条件", "岗位匹配与经历支撑", "求职准备与执行成熟度"] },
+          "candidate_level": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "target_entry_level": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "current_judgement": { "type": "string", "minLength": 1 },
+          "basis": { "type": "string", "minLength": 1 },
+          "main_gap": { "type": "string", "minLength": 1 },
+          "priority_action": { "type": "string", "minLength": 1 },
+          "confidence_note": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": true
+      }
+    },
+    "strengths_and_basis": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["core_strength", "experience_basis", "job_search_value", "applicable_scenarios"],
+        "properties": {
+          "core_strength": { "type": "string", "minLength": 1 },
+          "experience_basis": { "type": "string", "minLength": 1 },
+          "job_search_value": { "type": "string", "minLength": 1 },
+          "applicable_scenarios": { "$ref": "#/$defs/textList" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "improvement_priorities": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["key_gap", "target_impact", "issue_type", "improvement_method", "post_improvement_value", "priority"],
+        "properties": {
+          "key_gap": { "type": "string", "minLength": 1 },
+          "target_impact": { "type": "string", "minLength": 1 },
+          "issue_type": { "enum": ["硬门槛", "材料表达问题", "短期可训练问题", "需要长期积累的问题", "信息确认/决策边界问题"] },
+          "improvement_method": { "type": "string", "minLength": 1 },
+          "post_improvement_value": { "type": "string", "minLength": 1 },
+          "priority": { "enum": ["高", "中", "低"] },
+          "recruiter_concern": { "type": "string" },
+          "handling_principle": { "type": "string" },
+          "resume_strategy": { "type": "string" },
+          "interview_framework": { "type": "string" },
+          "evidence_to_prepare": { "type": "string" },
+          "wording_to_avoid": { "type": "string" },
+          "residual_risk": { "type": "string" },
+          "reassessment_condition": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "direction_decision": {
+      "type": "object",
+      "required": ["main_direction", "adjacent_backup", "safe_progression", "conditional_exploration", "diagnostic_not_recommended"],
+      "properties": {
+        "main_direction": { "$ref": "#/$defs/direction" },
+        "adjacent_backup": { "oneOf": [{ "$ref": "#/$defs/direction" }, { "type": "object", "maxProperties": 0 }] },
+        "safe_progression": { "oneOf": [{ "$ref": "#/$defs/direction" }, { "type": "object", "maxProperties": 0 }] },
+        "conditional_exploration": { "type": "array", "maxItems": 2, "items": { "$ref": "#/$defs/direction" } },
+        "diagnostic_not_recommended": { "type": "array", "maxItems": 2, "items": { "$ref": "#/$defs/direction" } }
+      },
+      "additionalProperties": true
+    },
+    "main_direction_preparation": {
+      "type": "object",
+      "required": ["valued_capabilities", "available_experiences", "resume_focus", "adjustment_signals"],
+      "properties": {
+        "direction_name": { "type": "string", "minLength": 1 },
+        "target_role_family": { "type": "string", "minLength": 1 },
+        "common_role_titles": { "$ref": "#/$defs/textList" },
+        "common_role_names": { "$ref": "#/$defs/textList" },
+        "core_responsibilities": { "$ref": "#/$defs/textList" },
+        "typical_work_content": { "$ref": "#/$defs/textList" },
+        "valued_capabilities": { "$ref": "#/$defs/textList" },
+        "available_experiences": { "$ref": "#/$defs/textList" },
+        "needs_supplement": { "$ref": "#/$defs/textList" },
+        "content_to_prepare": { "$ref": "#/$defs/textList" },
+        "resume_focus": { "$ref": "#/$defs/textList" },
+        "interview_stories": { "type": "array", "minItems": 3, "items": { "type": "object", "required": ["story_title"], "properties": { "story_title": { "type": "string" }, "usage_scenario": { "type": "string" } }, "additionalProperties": true } },
+        "priority_interview_stories": { "type": "array", "items": { "type": "object", "properties": { "story": { "type": "string" }, "use_case": { "type": "string" } }, "additionalProperties": true } },
+        "adjustment_signals": { "$ref": "#/$defs/textList" }
+      },
+      "additionalProperties": true
+    },
+    "recruitment_path_salary_and_roadmap": {
+      "type": "object",
+      "required": ["current_window_judgement", "parallel_paths", "special_channels"],
+      "properties": {
+        "current_recruitment_stage": { "type": "string", "minLength": 1 },
+        "candidate_recruitment_stage": { "type": "string", "minLength": 1 },
+        "current_window_judgement": { "type": "string", "minLength": 1 },
+        "priority_recruitment_paths": { "$ref": "#/$defs/textList" },
+        "priority_path": { "type": "string", "minLength": 1 },
+        "parallel_paths": { "$ref": "#/$defs/textList" },
+        "special_channels": { "$ref": "#/$defs/textList" },
+        "next_key_milestone": { "type": "string", "minLength": 1 },
+        "next_key_node": { "type": "string", "minLength": 1 },
+        "salary_reference": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["direction", "region", "currency", "salary_basis", "realistic_range"], "properties": { "direction": { "type": "string" }, "region": { "type": "string" }, "currency": { "type": "string" }, "salary_basis": { "type": "string" }, "realistic_range": { "type": "string" }, "upper_range": { "type": "string" }, "influencing_factors": { "$ref": "#/$defs/textList" }, "reference_degree": { "type": "string" }, "caution": { "type": "string" } }, "additionalProperties": true } },
+        "salary_assessment": { "$ref": "#/$defs/salaryAssessment" },
+        "priority_action_scaffolds": { "type": "array", "maxItems": 3, "items": { "$ref": "#/$defs/actionScaffold" } },
+        "route_30_60_90": { "type": "array", "minItems": 3, "maxItems": 3 },
+        "roadmap_30_60_90": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "$ref": "#/$defs/roadmapStage" } }
+      },
+      "additionalProperties": true
+    },
+    "information_basis_and_boundaries": {
+      "type": "object",
+      "required": ["remaining_unknowns"],
+      "properties": {
+        "source_categories": { "$ref": "#/$defs/textList" },
+        "sources": { "$ref": "#/$defs/textList" },
+        "consultation_confirmation_sources": { "$ref": "#/$defs/textList" },
+        "remaining_unknowns": { "$ref": "#/$defs/textList" },
+        "boundaries": { "$ref": "#/$defs/textList" },
+        "evidence_boundary": { "type": "string", "minLength": 1 },
+        "scope_statement": { "type": "string", "minLength": 1 },
+        "applicable_scope": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    },
+    "consultation_change_summary": {
+      "type": "object",
+      "required": ["applied", "remaining_unknowns"],
+      "properties": { "applied": { "type": "boolean" }, "remaining_unknowns": { "$ref": "#/$defs/textList" } },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "report_meta": { "properties": { "report_stage": { "const": "pre_consultation" } }, "required": ["report_stage"] } } },
+      "then": { "properties": { "report_meta": { "properties": { "customer_display_label": { "const": "会前诊断初版｜供1v1咨询讨论使用" } } }, "source_register": { "properties": { "consultation_confirmation_status": { "const": "not_started" } } }, "consultation_change_summary": { "properties": { "applied": { "const": false } } } } }
+    },
+    {
+      "if": { "properties": { "report_meta": { "properties": { "report_stage": { "const": "post_consultation_final" } }, "required": ["report_stage"] } } },
+      "then": { "properties": { "report_meta": { "properties": { "customer_display_label": { "const": "咨询后最终版｜依据简历、补充信息及1v1咨询确认" } } }, "source_register": { "properties": { "consultation_confirmation_status": { "const": "confirmed" } } }, "consultation_change_summary": { "properties": { "applied": { "const": true } } } } }
+    }
+  ],
+  "additionalProperties": true
+}

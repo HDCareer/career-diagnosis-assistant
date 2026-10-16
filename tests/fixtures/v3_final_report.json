@@ -1,0 +1,327 @@
+{
+  "report_meta": {
+    "report_version": "v3.0",
+    "report_stage": "post_consultation_final",
+    "customer_display_label": "咨询后最终版｜依据简历、补充信息及1v1咨询确认",
+    "report_date": "2026-06-23",
+    "safe_case_id": "V3-FINAL-DEMO-01",
+    "privacy_mode": "anonymous",
+    "report_title": "个人求职竞争力与方向决策报告"
+  },
+  "candidate_context": {
+    "education_background_type": "overseas_education",
+    "job_search_path_type": "overseas_returning_to_china",
+    "background_summary": "已完成商科硕士学习，并确认以回国分析类岗位作为近期求职重点。",
+    "education_summary": "课程和项目中积累了基础分析、协作和结论表达经验。",
+    "experience_summary": "咨询已确认两段项目能够用于分析型岗位的经历映射。",
+    "current_assets": ["已完成商科硕士学习", "两段可映射到分析型岗位的课程项目", "基础数据整理与结论表达经验"],
+    "future_potential": ["可以继续把跨文化协作经历转化为业务沟通故事"],
+    "planned_not_current": ["计划补充一份目标行业案例拆解", "计划制作岗位关键词表"]
+  },
+  "source_register": {
+    "resume_facts": ["完整简历"],
+    "pre_consultation_answers": ["固定问题回答", "地区动态问题回答"],
+    "operating_notes": {
+      "resume_versions_provided": ["主版本"],
+      "explicit_deadlines": [],
+      "confirmed_material_gaps": [],
+      "customer_stated_focus": ["回国分析类岗位"],
+      "other_decision_relevant_notes": []
+    },
+    "consultation_sources": {
+      "source_mode": "mixed",
+      "has_transcript": true,
+      "has_structured_notes": false,
+      "has_consultant_summary": true,
+      "source_limit": "逐字稿用于客户表达追溯，顾问总结用于专业判断；冲突不自动覆盖。"
+    },
+    "consultation_truth": {
+      "customer_confirmed_facts": [
+        {
+          "statement": "客户确认两段项目可用于分析型岗位经历映射。",
+          "source_mode": "transcript",
+          "attribution": "customer",
+          "quote_status": "paraphrased",
+          "verification_status": "stated",
+          "source_reference": "consultation_transcript#project_mapping",
+          "evidence_limit": "客户咨询表达，具体成果材料仍需整理。"
+        }
+      ],
+      "customer_stated_preferences": [
+        {
+          "statement": "客户原始首选回国分析类岗位。",
+          "source_mode": "transcript",
+          "attribution": "customer",
+          "quote_status": "paraphrased",
+          "verification_status": "stated",
+          "source_reference": "consultation_transcript#direction_preference",
+          "evidence_limit": "客户偏好，不等同于共同定案。"
+        }
+      ],
+      "customer_accepted_options": [
+        {
+          "statement": "客户表示可以接受策略运营分析岗作为相邻备选。",
+          "source_mode": "transcript",
+          "attribution": "customer",
+          "quote_status": "paraphrased",
+          "verification_status": "stated",
+          "source_reference": "consultation_transcript#accepted_backup",
+          "evidence_limit": "可接受选项，不自动升级为主攻方向。"
+        }
+      ],
+      "consultant_judgements": [
+        {
+          "statement": "顾问建议以商业分析与经营分析岗作为当前主攻方向。",
+          "source_mode": "consultant_summary",
+          "attribution": "consultant",
+          "quote_status": "not_applicable",
+          "verification_status": "consultant_recorded",
+          "source_reference": "consultant_summary#main_direction_judgement",
+          "evidence_limit": "顾问专业判断，不写入客户事实字段。"
+        }
+      ],
+      "jointly_agreed_decisions": [
+        {
+          "statement": "双方共同确认商业分析与经营分析岗作为当前主攻方向。",
+          "agreement_evidence": "顾问确认表中客户同意以商业分析与经营分析岗作为当前主攻方向。",
+          "source_mode": "mixed",
+          "attribution": "jointly_agreed",
+          "quote_status": "paraphrased",
+          "verification_status": "stated",
+          "source_reference": "consultation_confirmation_confirmed#main_direction",
+          "evidence_limit": "共同确认方向，不代表外部岗位或薪资已验证。"
+        }
+      ],
+      "consultant_recommended_actions": [
+        {
+          "statement": "顾问建议补充一页目标行业案例拆解。",
+          "source_mode": "consultant_summary",
+          "attribution": "consultant",
+          "quote_status": "not_applicable",
+          "verification_status": "consultant_recorded",
+          "source_reference": "consultant_summary#recommended_actions",
+          "evidence_limit": "顾问建议，客户尚未明确确认优先级。"
+        }
+      ],
+      "jointly_agreed_actions": [
+        {
+          "statement": "证据整理",
+          "source_mode": "mixed",
+          "attribution": "jointly_agreed",
+          "quote_status": "paraphrased",
+          "verification_status": "stated",
+          "source_reference": "consultation_confirmation_confirmed#priority_action_1",
+          "evidence_limit": "双方确认的第一优先行动。"
+        }
+      ]
+    },
+    "consultation_confirmations": {
+      "confirmed_items": ["已确认主攻方向", "已确认城市选择范围"],
+      "salary_reality_judgement": {
+        "reality_label": "stretch",
+        "reasoning": "15k 可以作为理想上沿保留，但当前材料仍需先补齐项目证据、岗位关键词和面试故事，不能把客户期待直接视为市场参考。",
+        "external_market_reference_used": false,
+        "evidence_limit": "本次未使用外部市场样本，也未做逐 Case 实时薪资采样。"
+      },
+      "confirmed_gap_repair_strategies": [
+        {
+          "gap": "项目成果的量化表达不完整",
+          "handling_principle": "只重构表达，不重构事实；先写可追溯动作，再写可确认结果。",
+          "resume_strategy": "每段项目按问题、动作、工具、产出四段重写，未确认数字不写成成果。",
+          "interview_framework": "用背景、个人动作、证据来源、复盘收获回答项目追问。",
+          "evidence_to_prepare": "项目报告、展示稿、导师反馈或小组分工记录。",
+          "wording_to_avoid": "避免写主导完整商业决策、显著提升业务指标等未经材料支持的表达。",
+          "residual_risk": "如果无法补齐结果证据，仍需把项目定位为分析训练而非真实业务结果。",
+          "reassessment_condition": "补齐至少两条可追溯证据后，重新评估简历项目强度。"
+        }
+      ],
+      "transition_reassessment_criteria": [
+        {
+          "target_transition": "策略运营分析岗",
+          "criteria": "完成一段可说明推进结果的业务案例后启用。",
+          "suggested_review_timing": "业务推进案例完成后"
+        }
+      ],
+      "confirmed_priority_actions": [
+        {
+          "action": "证据整理",
+          "priority_order": 1,
+          "expected_output": "一张至少覆盖两段项目的证据表。",
+          "dependency": "先核实事实和证据，再决定哪些内容进入简历。"
+        }
+      ]
+    },
+    "consultation_confirmation_status": "confirmed",
+    "confirmed_consultation_snapshot": {
+      "target_region": "中国内地回国求职路径",
+      "city_preferences": ["优先上海、杭州、深圳等业务分析机会较集中的城市"],
+      "role_preferences": ["商业分析", "经营分析", "策略运营分析"],
+      "customer_accepted_options": ["策略运营分析岗作为相邻备选"],
+      "platform_preferences": ["有成熟业务数据场景的平台", "具备规范培养机制的团队"],
+      "stated_exclusions": ["纯销售拓展岗"],
+      "work_style_boundaries": ["不以强销售导向岗位作为优先", "可以评估短周期项目协作"],
+      "customer_ideal_target": "15k 税前月薪",
+      "customer_minimum_boundaries": ["低于 10k 需要重新评估岗位质量与成长空间"],
+      "onboarding_timing": "以毕业后可入职时间为基准安排",
+      "identity_qualification_timing_conditions": ["具体公开信息核对资格与时间安排"],
+      "customer_core_decision_questions": ["目标行业在消费、互联网服务和企业服务之间的最终排序"],
+      "jointly_agreed_actions": ["证据整理"]
+    },
+    "consultation_change_log": [
+      {
+        "field": "stated_exclusions",
+        "change_status": "unchanged",
+        "statement": "沿用会前排除纯销售拓展岗的边界。",
+        "old_value": ["纯销售拓展岗"],
+        "source_mode": "mixed",
+        "attribution": "jointly_agreed",
+        "quote_status": "not_applicable",
+        "verification_status": "stated",
+        "source_reference": "consultation_confirmation_confirmed#exclusions",
+        "evidence_limit": "咨询未撤销该排除项。"
+      },
+      {
+        "field": "city_preferences",
+        "change_status": "modified",
+        "statement": "将城市边界从泛一线及新一线收束为上海、杭州、深圳优先。",
+        "old_value": ["优先一线及新一线城市"],
+        "new_value": ["优先上海、杭州、深圳等业务分析机会较集中的城市"],
+        "source_mode": "mixed",
+        "attribution": "jointly_agreed",
+        "quote_status": "paraphrased",
+        "verification_status": "stated",
+        "source_reference": "consultation_confirmation_confirmed#city_boundary",
+        "evidence_limit": "城市排序仍可根据岗位反馈迭代。"
+      },
+      {
+        "field": "work_style_boundaries",
+        "change_status": "revoked",
+        "statement": "撤销会前待确认的轮岗限制。",
+        "old_value": "是否接受轮岗待确认",
+        "source_mode": "mixed",
+        "attribution": "jointly_agreed",
+        "quote_status": "paraphrased",
+        "verification_status": "stated",
+        "source_reference": "consultation_confirmation_confirmed#work_style",
+        "evidence_limit": "最终报告不再保留该旧待确认项。"
+      }
+    ],
+    "unresolved_questions": [
+      {
+        "question": "目标行业在消费、互联网服务和企业服务之间的最终排序",
+        "source_reference": "consultation_confirmation_confirmed#remaining_unknowns",
+        "why_decision_relevant": "行业排序会影响案例准备重点和岗位关键词优先级。",
+        "unresolved_reason_type": "explicit_missing"
+      }
+    ],
+    "unresolved_information": ["目标行业在消费、互联网服务和企业服务之间的最终排序"],
+    "critical_evidence_status": [
+      { "subject": "商科硕士学习经历", "source_type": "resume", "verification_status": "material_verified", "current_safe_wording": "简历材料显示已完成商科硕士学习。" },
+      { "subject": "两段项目用于分析型岗位映射", "source_type": "consultation_self_report", "verification_status": "partially_supported", "current_safe_wording": "咨询中客户说明两段项目可用于分析型岗位经历映射，具体成果证据仍需整理。" },
+      { "subject": "项目可由导师佐证", "source_type": "consultant_summary", "verification_status": "unverified", "current_safe_wording": "客户表示项目情况可由导师佐证，但当前未提供导师材料。" }
+    ]
+  },
+  "decision_snapshot": {
+    "current_judgement": "商业分析与经营分析岗是当前最适合集中准备的主攻方向；策略运营分析可作为具备业务推进案例后的相邻备选。",
+    "core_request": "在回国路径中建立一套可投递、可面试、可根据反馈迭代的分析类岗位准备方案。",
+    "core_question_answers": [
+      { "question": "当前是否应该集中准备商业分析与经营分析岗？", "answer": "可以。以已确认的课程项目、分析工具基础和回国偏好看，商业分析与经营分析岗是更适合集中准备的主攻方向。", "answer_status": "answered", "boundary": "行业最终排序仍会影响案例准备重点。" },
+      { "question": "策略运营分析是否可以同步作为备选？", "answer": "可以作为相邻备选，但应等业务推进案例能够说明协作结果后再提高优先级。", "answer_status": "answered", "boundary": "如果后续无法补足业务推进证据，应继续保持主攻商业分析与经营分析。" },
+      { "question": "15k 的理想薪资目标是否适合作为当前决策锚点？", "answer": "可以作为理想目标保留，但当前更适合作为冲刺目标管理，先用材料质量和岗位反馈验证上沿可能性。", "answer_status": "partially_answered", "boundary": "本次未使用外部市场样本，不生成市场薪资区间。" }
+    ],
+    "main_direction": { "direction_name": "商业分析与经营分析岗" },
+    "adjacent_backup": { "direction_name": "策略运营分析岗", "activation_condition": "当业务推进案例完成并能说明协作结果时启用。" },
+    "key_strengths": ["有结构化问题拆解能力", "能完成跨文化协作交付", "具备数据整理与结论表达基础"],
+    "key_gaps": ["分析成果需要进一步量化", "行业案例储备仍需补充", "面试故事需要完成稳定表达"],
+    "next_actions": ["完成商业分析主方向简历", "整理三个 STAR 故事提纲", "建立目标岗位关键词表" ]
+  },
+  "decision_boundaries": {
+    "target_region": "中国内地回国求职路径",
+    "city_preferences": ["优先上海、杭州、深圳等业务分析机会较集中的城市"],
+    "time_preferences": ["以毕业后可入职时间为基准安排"],
+    "role_preferences": ["商业分析", "经营分析", "策略运营分析"],
+    "platform_preferences": ["有成熟业务数据场景的平台", "具备规范培养机制的团队"],
+    "work_style_boundaries": ["不以强销售导向岗位作为优先", "可以评估短周期项目协作"],
+    "stated_exclusions": ["纯销售拓展岗"],
+    "unresolved_questions": ["目标行业在消费、互联网服务和企业服务之间的最终排序"]
+  },
+  "three_dimension_benchmark": [
+    { "dimension_name": "基础资本与准入条件", "candidate_level": 3, "target_entry_level": 3, "current_judgement": "基础条件能够支持初级分析岗位的筛选与学习要求。", "basis": "已确认相关课程和工具练习能够形成基础支撑。", "main_gap": "可验证的业务指标案例仍需补足。", "priority_action": "将项目输出中的结果和反馈整理为可引用证据。", "confidence_note": "基于已确认材料与咨询结论。" },
+    { "dimension_name": "岗位匹配与经历支撑", "candidate_level": 3, "target_entry_level": 3, "current_judgement": "两段项目经历可以支持商业分析与经营分析的初级岗位叙事。", "basis": "已确认问题拆解、资料处理和建议输出的个人参与内容。", "main_gap": "行业场景的针对性表达需要继续加强。", "priority_action": "按目标行业补充一份关键词与案例映射表。", "confidence_note": "项目职责和主要产出已在咨询中确认。" },
+    { "dimension_name": "求职准备与执行成熟度", "candidate_level": 2, "target_entry_level": 3, "current_judgement": "方向已确认，但材料和面试表达尚处于集中完善阶段。", "basis": "已有方向、城市和工作方式边界，尚未形成稳定面试版本。", "main_gap": "主方向简历与故事演练需要形成闭环。", "priority_action": "在未来 30 天完成材料、故事和一次复盘。", "confidence_note": "行业排序仍保留为后续调整信号。" }
+  ],
+  "strengths_and_basis": [
+    { "core_strength": "结构化分析与结论表达", "experience_basis": "已确认在课程项目中负责拆分问题、整理资料并汇总结论。", "job_search_value": "能够直接对应初级分析岗位的基础分析与复盘工作。", "applicable_scenarios": ["业务数据复盘", "专题分析支持"] },
+    { "core_strength": "跨文化协作与任务推进", "experience_basis": "已确认在多文化小组中承担协调分工与阶段交付任务。", "job_search_value": "有利于承接需要与业务方沟通的分析支持场景。", "applicable_scenarios": ["跨团队项目协作", "需求澄清与跟进"] },
+    { "core_strength": "数据工具的学习与应用基础", "experience_basis": "已确认能够使用表格和基础可视化工具完成项目整理。", "job_search_value": "可作为继续补强分析工具和岗位方法的起点。", "applicable_scenarios": ["经营数据整理", "周期性看板复盘"] }
+  ],
+  "improvement_priorities": [
+    { "key_gap": "项目成果的量化表达不完整", "target_impact": "会影响简历初筛和项目追问中的可信度。", "issue_type": "材料表达问题", "improvement_method": "将已确认的项目结果、反馈和个人动作整理为统一表述。", "post_improvement_value": "能形成一版可用于简历和面试的项目证据链。", "priority": "高", "recruiter_concern": "担心项目只是课程参与，个人贡献和结果不可判断。", "handling_principle": "只重构表达，不重构事实；先写可追溯动作，再写可确认结果。", "resume_strategy": "每段项目按问题、动作、工具、产出四段重写，未确认数字不写成成果。", "interview_framework": "用背景、个人动作、证据来源、复盘收获回答项目追问。", "evidence_to_prepare": "项目报告、展示稿、导师反馈或小组分工记录。", "wording_to_avoid": "避免写主导完整商业决策、显著提升业务指标等未经材料支持的表达。", "residual_risk": "如果无法补齐结果证据，仍需把项目定位为分析训练而非真实业务结果。", "reassessment_condition": "补齐至少两条可追溯证据后，重新评估简历项目强度。" },
+    { "key_gap": "行业案例与岗位关键词储备有限", "target_impact": "会降低对目标岗位工作内容的具体理解。", "issue_type": "短期可训练问题", "improvement_method": "围绕主攻方向整理常见业务问题、指标和案例语言。", "post_improvement_value": "能提升岗位沟通和面试表达的针对性。", "priority": "高", "recruiter_concern": "担心候选人只知道岗位名称，不理解日常任务和业务指标。", "handling_principle": "先建立岗位能力要求，再把已有经历映射到要求。", "resume_strategy": "在简历摘要和项目 bullet 中使用分析、复盘、指标、建议等岗位语言。", "interview_framework": "用目标岗位任务、相关经历、仍需补强三段回答为什么适合。", "evidence_to_prepare": "10 条岗位描述关键词、3 个常见业务问题和对应经历映射。", "wording_to_avoid": "避免空泛写对商业分析很感兴趣但没有任务理解。", "residual_risk": "行业排序未定时，案例准备会分散。", "reassessment_condition": "目标行业排序确定后，更新关键词表和案例优先级。" },
+    { "key_gap": "面试故事尚未完成稳定演练", "target_impact": "会影响追问下的表达节奏和重点控制。", "issue_type": "短期可训练问题", "improvement_method": "完成三段故事提纲并进行录音复盘。", "post_improvement_value": "能在常见行为面中清楚说明个人贡献。", "priority": "中", "recruiter_concern": "担心表达停留在项目描述，无法说明个人贡献。", "handling_principle": "提升叙事顺序，不制造经历。", "resume_strategy": "简历只保留能在面试中讲清楚的项目重点。", "interview_framework": "每段故事固定使用情境、任务、行动、结果证据、反思。", "evidence_to_prepare": "三段 STAR 提纲、一次录音复盘和追问清单。", "wording_to_avoid": "避免把团队成果全部写成个人完成。", "residual_risk": "没有持续演练时，追问下仍可能散乱。", "reassessment_condition": "三段故事能在三分钟内稳定讲清后，进入模拟问答。" }
+  ],
+  "direction_decision": {
+    "main_direction": { "direction_name": "商业分析与经营分析岗", "recommendation_reason": "已确认的经历、工具基础和偏好能够集中服务于分析、复盘和业务支持场景。", "usable_evidence": "课程项目中的问题拆解、资料整理和结论输出。", "main_barrier": "项目结果证据和岗位关键词仍需补齐。", "long_term_path_value": "可向经营分析、策略分析或业务数据支持继续延展。" },
+    "adjacent_backup": { "direction_name": "策略运营分析岗", "recommendation_reason": "可承接跨团队协作与项目推进经验。", "activation_condition": "完成一段可说明推进结果的业务案例后启用。", "usable_evidence": "跨文化小组协作和阶段交付经历。", "main_barrier": "业务推进结果尚未形成稳定证据。", "long_term_path_value": "有利于从分析支持逐步靠近策略与运营协同岗位。" },
+    "safe_progression": { "direction_name": "业务运营支持岗", "recommendation_reason": "可作为在真实业务场景中继续积累分析能力的稳妥路径。", "usable_evidence": "基础数据整理和沟通协作经验。", "main_barrier": "岗位可能偏执行，需要筛选分析含量。", "long_term_path_value": "可作为进入业务场景后继续积累指标和流程经验的路径。" },
+    "conditional_exploration": [ { "direction_name": "产品运营分析岗", "recommendation_reason": "当前与主攻方向相邻，但需要行业案例和产品场景偏好支持。", "low_cost_validation": "完成一次产品场景案例拆解后再评估。", "usable_evidence": "分析框架和用户场景学习能力。", "main_barrier": "产品场景案例不足。", "long_term_path_value": "若后续补足产品理解，可扩展到用户和产品数据分析。" } ],
+    "diagnostic_not_recommended": [ { "direction_name": "纯财务建模岗", "recommendation_reason": "当前材料尚未显示与其核心方法要求相匹配的长期训练基础。", "reassessment_condition": "完成系统化建模训练并积累对应项目后再评估。", "usable_evidence": "当前只有基础商科训练。", "main_barrier": "缺少财务建模训练和可展示模型项目。", "long_term_path_value": "如果未来补齐系统训练，可作为长期探索方向。" } ]
+  },
+  "main_direction_preparation": {
+    "direction_name": "商业分析与经营分析岗",
+    "common_role_titles": ["商业分析专员", "经营分析专员", "业务分析助理"],
+    "core_responsibilities": ["整理业务数据与经营信息", "支持周期性复盘", "形成可执行的分析建议"],
+    "valued_capabilities": ["问题拆解", "数据处理基础", "业务沟通与结论表达"],
+    "available_experiences": ["课程项目中的问题拆解与结论输出", "跨文化小组的协作交付", "基础数据工具应用"],
+    "needs_supplement": ["与目标行业相关的案例语言", "项目成果的量化证据"],
+    "resume_focus": ["用问题、动作、结论展示项目过程", "将工具使用与业务场景连接起来"],
+    "interview_stories": [
+      { "story_title": "从模糊问题到分析框架", "usage_scenario": "回答如何处理复杂或不清晰的问题" },
+      { "story_title": "跨文化小组中的协作推进", "usage_scenario": "回答如何协调不同观点并完成交付" },
+      { "story_title": "从资料整理到建议输出", "usage_scenario": "回答如何依据事实形成建议" }
+    ],
+    "adjustment_signals": ["目标岗位持续要求高阶建模能力时重新评估", "行业排序发生变化时同步更新案例准备重点"]
+  },
+  "recruitment_path_salary_and_roadmap": {
+    "candidate_recruitment_stage": "毕业前求职准备期",
+    "current_recruitment_stage": "主方向材料完善与定向准备阶段",
+    "current_window_judgement": "当前应优先完成主方向材料和面试准备，并持续关注方向级公开入口。",
+    "priority_recruitment_paths": ["企业官网的校招和初级岗位入口", "学校职业发展中心"],
+    "parallel_paths": ["行业协会公开信息", "目标平台的人才项目"],
+    "special_channels": ["校友职业分享活动"],
+    "next_key_milestone": "完成主方向简历、三个故事提纲和岗位关键词表。",
+    "salary_assessment": {
+      "customer_ideal_target": "15k 税前月薪",
+      "customer_minimum_boundaries": ["低于 10k 需要重新评估岗位质量与成长空间"],
+      "consultant_reality_label": "stretch",
+      "consultant_reasoning": "15k 可以作为理想上沿保留，但当前材料仍需先补齐项目证据、岗位关键词和面试故事，不能把客户期待直接视为市场参考。",
+      "external_market_reference": { "status": "not_used" },
+      "decision_guidance": "先以主方向材料质量和岗位反馈验证上沿可能性；若反馈集中在经验不足，应优先接受更稳妥的分析支持类入口。",
+      "evidence_limit": "本次未使用外部市场样本，也未做逐 Case 实时薪资采样。"
+    },
+    "salary_reference": [
+      { "direction": "商业分析与经营分析岗", "region": "一线及新一线城市", "currency": "人民币", "salary_basis": "税前月薪参考", "realistic_range": "8,000–12,000 / 月", "upper_range": "12,000–15,000 / 月", "influencing_factors": ["行业", "城市", "项目匹配度", "岗位培养机制"], "reference_degree": "方向级参考", "caution": "具体口径需以岗位公告、城市和沟通信息为准。" }
+    ],
+    "roadmap_30_60_90": [
+      { "stage": "30 天", "stage_objective": "完成主方向材料和故事底稿。", "core_actions": ["完成商业分析主方向简历", "整理三个 STAR 故事提纲", "建立岗位关键词表"], "outputs": ["一版可投递简历", "三个故事提纲", "关键词表"], "completion_signs": ["简历与主攻方向一致", "能在三分钟内讲清每段故事", "每个关键词均有一条经历映射"] },
+      { "stage": "60 天", "stage_objective": "形成面试练习与岗位理解的复盘机制。", "core_actions": ["进行模拟问答", "复盘表达与案例缺口"], "outputs": ["模拟问答记录", "案例补充清单"], "completion_signs": ["能说明岗位常见任务与自身经历的连接"] },
+      { "stage": "90 天", "stage_objective": "依据反馈迭代材料和方向优先级。", "core_actions": ["汇总反馈", "更新简历与故事重点"], "outputs": ["更新后的材料版本", "方向复盘记录"], "completion_signs": ["能依据反馈说明下一轮准备调整"] }
+    ],
+    "priority_action_scaffolds": [
+      { "action_name": "证据整理", "why_now": "项目成果可信度是简历重构和面试回答的基础。", "dependency": "先核实事实和证据，再决定哪些内容进入简历。", "first_15_minute_step": "打开项目资料，列出每段项目的任务、个人动作、产出和可追溯材料。", "content_framework": "按项目名称、问题、个人动作、工具、产出、证据来源六列整理。", "minimum_viable_output": "一张至少覆盖两段项目的证据表。", "estimated_effort": "15 分钟启动，2 小时完成第一版。", "completion_check": "每条成果都有材料来源或明确标注暂未确认。", "common_mistakes": "把团队成果直接写成个人成果，或把未确认数字写成结果。" },
+      { "action_name": "简历重构", "why_now": "主方向已确认，简历需要先对齐商业分析与经营分析语言。", "dependency": "依赖证据表和目标岗位关键词。", "first_15_minute_step": "选出一个项目，改写为问题、动作、工具、产出四段式 bullet。", "content_framework": "摘要聚焦主攻方向，项目经历突出分析任务、工具、结论和业务理解。", "minimum_viable_output": "一版商业分析主方向简历。", "estimated_effort": "半天完成初稿，1 天内完成自检。", "completion_check": "简历中每个主张都能在证据表中找到来源。", "common_mistakes": "为了贴合岗位而新增未发生职责，或保留与主方向无关的大段描述。" },
+      { "action_name": "作品补强", "why_now": "行业案例和岗位关键词不足会影响面试中的岗位理解。", "dependency": "依赖主方向简历和目标岗位能力要求。", "first_15_minute_step": "选择一个目标行业，写出 3 个常见业务问题和可能指标。", "content_framework": "用业务问题、指标、分析思路、建议输出四部分形成一页案例。", "minimum_viable_output": "一页目标行业案例拆解底稿。", "estimated_effort": "2 到 3 小时完成第一版。", "completion_check": "案例能与简历中的一个项目或能力点连接。", "common_mistakes": "直接复制行业资料，或做成与岗位任务无关的泛泛总结。" }
+    ]
+  },
+  "information_basis_and_boundaries": {
+    "source_categories": ["已提供的简历", "会前补充信息", "已确认的咨询内容"],
+    "consultation_confirmation_sources": ["已确认的方向、城市和工作方式边界"],
+    "remaining_unknowns": ["目标行业在消费、互联网服务和企业服务之间的最终排序"],
+    "boundaries": ["岗位与薪资仅作方向参考", "需以具体公开信息核对资格与时间安排", "不生成具体实时岗位链接"],
+    "scope_statement": "用于支持主方向准备、路径安排和后续复盘。"
+  },
+  "consultation_change_summary": {
+    "applied": true,
+    "remaining_unknowns": ["目标行业在消费、互联网服务和企业服务之间的最终排序"]
+  }
+}
